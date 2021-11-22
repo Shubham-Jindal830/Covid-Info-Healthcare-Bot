@@ -1,0 +1,200 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	START CUSTOM STYLES & OVERRIDES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+:root {
+
+
+	--cyan: #00ffff;
+	--seagreen: #2e8b57;
+	--snow: #fffafa;
+	--light: #e6e6e6;
+	--lightgray: #778899;
+	--darkred: #8b0000;
+	--indigo: #4b0082;
+	--coral: #ff7f50;
+
+	--unit: 1rem;
+	--spacer: 0.9375rem; /* 15px */
+
+	--font-family: Dank 1, "Courier New", Georgia, Tahoma;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: var(--unit);
+	line-height: 1.45;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	margin-bottom: var(--unit);
+	margin-top: var(--unit);
+}
+
+ul {
+	padding-left: 20px;
+}
+
+button {
+	cursor: pointer;
+	font-family: var(--font-family);
+	font-size: inherit;
+}
+
+.ac-input {
+	padding: 10px 16px;
+}
+
+.ac-multichoiceInput {
+	padding-left: 6px;
+}
+
+#root {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 100%;
+	padding: 10px;
+}
+
+/* Disabled buttons */
+#root button.disabled {
+	background-color: var(--coral);
+	color: var(--darkred);
+	cursor: default;
+}
+/* Disabled buttons that have been clicked */
+#root button.disabled.is-clicked {
+	background-color: var(--cyan);
+	color: var(--snow);
+}
+
+.spinner {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+.chatboxes {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.chatbox {
+	display: flex;
+	width: auto;
+}
+/* When a .chatbox is next to another */
+.chatbox + .chatbox {
+	margin-top: 10px;
+}
+/* When a .chatbox are next to a .chatbox--response || vice versa */
+.chatbox:not(.chatbox--response) + .chatbox--response,
+.chatbox--response + .chatbox:not(.chatbox--response) {
+	margin-top: 30px;
+}
+.chatbox--response {
+	justify-content: flex-end;
+}
+
+.chatbox-icon {
+	align-items: center;
+	/* background-color: #005eaa; */
+    border-radius: 100%;
+    color: var(--snow);
+	display: flex;
+	font-size: 75%;
+    font-weight: bold;
+	height: 40px;
+    justify-content: center;
+	margin-top: 8px;
+    min-height: 40px;
+    min-width: 40px;
+    width: 40px;
+}
+.chatbox--response .chatbox-icon {
+	background-color: var(--seagreen);
+	margin-top: 0;
+}
+
+.chatbox-body {
+	background-color: var(--snow);
+    border: 1px solid;
+    border-color: var(--light);
+    border-radius: 2px;
+    padding: var(--spacer);
+    position: relative;
+}
+.chatbox--response .chatbox-body {
+	background-color: var(--indigo);
+	color: var(--snow);
+	padding: 10px;
+}
+.chatbox-body :first-child {
+	margin-top: 0;
+}
+.chatbox-body :last-child {
+	margin-bottom: 0;
+}
+.chatbox-icon + .chatbox-body,
+.chatbox-body + .chatbox-icon {
+	margin-left: 10px;
+}
+
+.chatbox-body + .chatbox-body {
+	margin-top: 10px;
+}
+
+.chatbox-btn,
+.ac-pushButton {
+	background-color: var(--snow);
+    border-style: solid;
+	border-width: 1px;
+	color: var(--cyan);
+	font-weight: 600;
+	display: block;
+	outline: 2px solid transparent;
+	padding: 10px 16px;
+	width: 100%;
+}
+.chatbox-btn:focus,
+.chatbox-btn:hover,
+.ac-pushButton:focus,
+.ac-pushButton:hover {
+	background-color: var(--cyan);
+	color: var(--snow);
+}
+.chatbox-btn:active,
+.ac-pushButton:active {
+	border-color: var(--darkred);
+	outline: 1px solid var(--darkred);
+}
+.chatbox-btn + .chatbox-btn,
+.ac-pushButton + .ac-pushButton {
+	margin-top: 6px;
+}
+
+.newMessage{
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 10px;
+	border-width:0px;
+	color:snow;
+	padding:10px;	
+	right:22px;	
+	z-index: 1;
+	position: fixed;
+	cursor: pointer;
+	display: none;
+	font-size: smaller;
+}
