@@ -18,4 +18,4 @@ Azure Portal
 Azure Coginitive Search  
 Azure Bot Service  
 <br />
-#### Project Demo URL: https://elastic-davinci-7ec731.netlify.app/
+#### Project Demo URL: https://zealous-dune-0c0d32110.azurestaticapps.net  ||  https://elastic-davinci-7ec731.netlify.app/
