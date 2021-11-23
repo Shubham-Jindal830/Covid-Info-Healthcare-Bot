@@ -12,11 +12,11 @@ I have created a Chatbot to help the general public learn more about COVID-19 wh
 <br />
 #### Azure Technology:
 Health Bot  
+Static Web Apps  
 Azure Healthcare APIs PREVIEW  
-Azure Service Health  
 Azure Portal  
-Azure Coginitive Search  
 Azure Bot Service  
+Azure Service Health  
 <br />
 #### Project Demo URL: 
 https://zealous-dune-0c0d32110.azurestaticapps.net &emsp;||&emsp; https://elastic-davinci-7ec731.netlify.app/
